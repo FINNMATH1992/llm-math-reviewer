@@ -1,0 +1,41 @@
+{
+  "name": "llm-math-reviewer",
+  "version": "0.1.0",
+  "description": "Evidence-driven verification workflow for reviewing mathematical papers.",
+  "author": {
+    "name": "FINN",
+    "email": "finnmath@163.com",
+    "url": "https://github.com/FINNMATH1992"
+  },
+  "homepage": "https://github.com/FINNMATH1992/llm-math-reviewer",
+  "repository": "https://github.com/FINNMATH1992/llm-math-reviewer",
+  "license": "MIT",
+  "keywords": [
+    "math",
+    "review",
+    "verification"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "LLM Math Reviewer",
+    "shortDescription": "LLM-driven verification workflow for theorem papers.",
+    "longDescription": "Turns a large language model into a more disciplined reviewer for mathematical papers using explicit claims, obligation ledgers, adversarial checks, and closure rules.",
+    "developerName": "FINN",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/FINNMATH1992/llm-math-reviewer",
+    "privacyPolicyURL": "https://github.com/FINNMATH1992/llm-math-reviewer",
+    "termsOfServiceURL": "https://github.com/FINNMATH1992/llm-math-reviewer",
+    "defaultPrompt": [
+      "Review this math paper and extract its core claims.",
+      "Build an obligation ledger for this theorem paper.",
+      "Check this proof for hidden assumptions or gaps."
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

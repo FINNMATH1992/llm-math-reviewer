@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Math Reviewer"
+  short_description: "Evidence-driven math paper review"
+  default_prompt: "Use $llm-math-reviewer to review this mathematical paper with a strict claim ledger, closure loop, and evidence-preserving verdict."

@@ -1,0 +1,22 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="28" y1="20" x2="228" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="150" y1="144" x2="218" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" rx="56" fill="url(#bg)"/>
+  <rect x="64" y="56" width="116" height="132" rx="18" fill="#F8FAFC"/>
+  <rect x="64" y="56" width="116" height="24" rx="18" fill="#DBEAFE"/>
+  <rect x="80" y="94" width="60" height="9" rx="4.5" fill="#1E3A8A"/>
+  <rect x="80" y="115" width="82" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="80" y="134" width="70" height="8" rx="4" fill="#93C5FD"/>
+  <rect x="80" y="153" width="76" height="8" rx="4" fill="#1E40AF"/>
+  <circle cx="182" cy="176" r="34" fill="url(#badge)"/>
+  <path d="M166 176L177 187L199 165" stroke="white" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
