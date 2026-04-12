@@ -25,6 +25,15 @@ We have tested this workflow on a small number of papers that were later associa
 
 To avoid unnecessary controversy, this repository does not include case-by-case results or name specific papers.
 
+## Disclaimer
+
+- This plugin is a review aid, not an automated authority on mathematical correctness.
+- Its outputs should be treated as structured review targets, not as final judgments, unless decisive evidence is explicitly recorded.
+- A flagged step, unresolved obligation, or failed verification path does not by itself establish that a theorem or paper is false.
+- Tool failure, parser failure, or formalization failure should be interpreted as workflow limitations unless they directly expose a mathematical contradiction.
+- Human mathematical judgment remains necessary, especially for compressed arguments, domain-specific techniques, and borderline cases.
+- This repository is intended for methodological experimentation and careful review support, not for making public accusations about specific papers or authors.
+
 ## Repository Layout
 
 ```text
