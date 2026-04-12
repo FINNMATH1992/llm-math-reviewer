@@ -36,7 +36,14 @@ skills/llm-math-reviewer/references/math-review-sop.md
 
 ## Local Installation
 
-You can also give Codex the local plugin path directly and let Codex complete the installation for you. For example, after cloning this repository to `~/plugins/llm-math-reviewer`, you can simply give Codex that path.
+There are two installation paths.
+
+### Option 1: Let Codex Install It
+
+1. Clone this repository to a local plugin path such as `~/plugins/llm-math-reviewer`.
+2. Give Codex that path directly and ask Codex to install the plugin.
+
+### Option 2: Install It Manually
 
 1. Clone this repository.
 2. Put the repository at `~/plugins/llm-math-reviewer` or another local plugins directory.
