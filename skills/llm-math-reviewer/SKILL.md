@@ -50,6 +50,30 @@ For the global paper verdict, finish only with:
 
 Do not stop at labels such as `reviewed_textually`, `looks_plausible`, `standard argument`, or `no contradiction found`.
 
+## Prevent Overclaim
+
+- Treat a review target as a review target, not as a defect, unless terminal evidence has been established.
+- Do not upgrade `suspicious`, `compressed`, `unresolved`, `blocked`, or `merits further scrutiny` into `false`, `invalid`, or `proof failure` without decisive evidence.
+- Any negative claim stronger than `unresolved` must be backed by one of:
+  - a verified counterexample
+  - an explicit contradiction
+  - a precise proof failure tied to an exact source span
+- Tool failure, parser failure, formalization failure, or inability to complete a verification path are workflow limitations unless they themselves expose a mathematical contradiction.
+- Charitable reconstruction may generate new review targets, but it may not by itself justify `verified` or `proof_failure_established`.
+- Sampled computation, finite-instance checks, or heuristic searches may support suspicion or partial confidence, but they do not justify exhaustive conclusions unless scope and exhaustiveness are independently established.
+- Distinguish strictly between:
+  - step-level findings
+  - claim-level statuses
+  - paper-level verdicts
+- A local unresolved step does not by itself settle the surrounding theorem, and a nonterminal theorem does not by itself settle the global paper verdict.
+- Final markdown reporting must not strengthen the underlying structured record. If the ledger says `unresolved`, the prose may explain why, but it may not escalate that status into a defect claim.
+- Prefer conservative wording when terminal evidence is absent. Default phrases include:
+  - `remains unresolved`
+  - `could not be verified from the available evidence`
+  - `merits further scrutiny`
+  - `a blocking obligation remains`
+  - `this verification path was inconclusive`
+
 ## Maintain Forward Motion
 
 - Never stop the review merely because the current path is inconclusive. If one route stalls, immediately choose another concrete route in the same session.
@@ -127,6 +151,7 @@ Do not stop at labels such as `reviewed_textually`, `looks_plausible`, `standard
 - Re-run target selection against the current obligation ledger, not only the initial risk report.
 - Audit every unresolved leaf obligation before assigning the final verdict.
 - If any unresolved leaf obligation still has a feasible next action, perform that action before closing.
+- Confirm that no prose conclusion is stronger than the evidence class recorded in the ledger.
 - Assign a positive global verdict only if every core claim is verified within an explicit scope.
 - Assign a negative verdict only when a verified counterexample, explicit contradiction, or precise proof failure is established.
 - Otherwise assign `verification_incomplete`.
@@ -190,6 +215,8 @@ Read `references/math-review-sop.md` for the exact required fields, stage order,
 - State when computational checks cover only tested instances.
 - State exactly which span required charitable reconstruction, what was reconstructed, and whether the issue remained substantive.
 - Do not claim that the paper or theorem is correct unless the positive threshold is met.
+- Do not phrase an unresolved issue as an established defect unless terminal evidence is recorded.
+- Do not let the narrative summary sound stronger than the claim ledger or verdict records.
 - Do not say "everything checks out" or "no major issues found" while any core claim remains nonterminal.
 
 ## Escalate When the Review Finds Something Serious

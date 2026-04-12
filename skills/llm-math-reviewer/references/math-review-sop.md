@@ -131,6 +131,16 @@ The agent MUST follow these rules at all times.
 23. In the default mode, do not obtain or use information published after the paper. If such information is retrieved accidentally, ignore it and continue using only admissible contemporaneous sources.
 24. If and only if the user explicitly asks for comparison against errata, revised versions, or later author clarifications, run that work in a separate reconciliation layer and keep the original paper-as-written verdict unchanged.
 25. Later materials may refine how findings are classified, but they do not retroactively change what the original text said.
+26. Treat a review target as a review target, not as a defect, unless terminal evidence is established.
+27. Negative language stronger than `unresolved`, `blocked`, or `merits further scrutiny` requires one of:
+   - a verified counterexample
+   - an explicit contradiction
+   - a precise proof failure tied to an exact source span
+28. Tool failure, parser failure, formalization failure, or incomplete verification paths are workflow limitations unless they themselves establish a mathematical contradiction.
+29. Charitable reconstruction alone cannot justify `verified` or `proof_failure_established`.
+30. Sampled computation, heuristic search, or finite-instance testing may support suspicion, but they cannot justify exhaustive conclusions unless scope and exhaustiveness are independently established.
+31. Do not strengthen conclusions when moving from the structured ledger to the final prose report.
+32. Distinguish step-level findings, claim-level statuses, and the paper-level verdict; do not promote a local unresolved step into a global defect claim without the required evidence.
 
 ---
 
