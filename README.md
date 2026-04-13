@@ -6,6 +6,10 @@
 
 In practice, this plugin turns a general-purpose large language model into a more disciplined math-paper reviewer by forcing explicit claims, dependency tracking, obligation ledgers, adversarial checks, and closure rules.
 
+## Usage Note
+
+For difficult papers, this plugin works best when the model is allowed to use the highest reasoning setting available. Lower reasoning settings are more likely to stop early, compress obligations too aggressively, or miss subtle dependency and citation issues.
+
 ## What It Does
 
 - uses a large language model as the main reasoning engine, but constrains it with a verification-oriented workflow
