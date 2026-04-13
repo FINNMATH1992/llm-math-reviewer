@@ -27,6 +27,8 @@ General-purpose LLMs are often willing to stop too early, accept vague proof ske
 
 We have tested this workflow on a small number of papers that were later associated with published corrections or errata. In those cases, the plugin was able to surface parts of the argument that merited further scrutiny and, in practice, pointed toward the sections that eventually required correction.
 
+In limited testing, we have also seen cases where parts of a preprint highlighted by the workflow were later revised, clarified, or expanded in subsequent versions. We do not draw case-by-case conclusions from such observations, but they suggest that the workflow can sometimes identify sections of an argument that deserve closer review.
+
 To avoid unnecessary controversy, this repository does not include case-by-case results or name specific papers.
 
 ## Disclaimer
