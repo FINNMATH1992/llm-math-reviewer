@@ -141,6 +141,12 @@ The agent MUST follow these rules at all times.
 30. Sampled computation, heuristic search, or finite-instance testing may support suspicion, but they cannot justify exhaustive conclusions unless scope and exhaustiveness are independently established.
 31. Do not strengthen conclusions when moving from the structured ledger to the final prose report.
 32. Distinguish step-level findings, claim-level statuses, and the paper-level verdict; do not promote a local unresolved step into a global defect claim without the required evidence.
+33. Perform blocker triage early: separate cheap local checks from deep dependency-driven blockers before attempting long proof reconstructions.
+34. Use executable checks early for local algebra, parameter consistency, index consistency, and similar low-cost invariants when feasible.
+35. Audit cited results for statement match as early as possible; verify that the cited statement actually supplies the hypotheses, scope, and parameter regime the proof uses.
+36. Distinguish typo or transcription defects from substantive proof blockers, and record both when relevant without conflating them.
+37. For each unresolved obligation, record whether it is local to the current argument or inherited through an external dependency chain.
+38. Every active blocker must carry a highest-value next action; vague notes such as "continue verification" are not sufficient ledger entries.
 
 ---
 

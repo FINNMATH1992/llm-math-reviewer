@@ -109,6 +109,9 @@ Do not stop at labels such as `reviewed_textually`, `looks_plausible`, `standard
 - Distinguish explicit citations, implicit usage, notation dependencies, and hidden-assumption candidates.
 - Run a risk scan before expensive checks.
 - Flag compressed steps, undefined symbols, scope drift, omitted witnesses, circularity, case splits, and citation vagueness.
+- Perform blocker triage early. Separate cheap local checks from deep proof dependencies before investing in long-form proof reconstruction.
+- Use executable checks early to close local algebraic manipulations, parameter consistency, index consistency, and straightforward symbolic identities whenever feasible.
+- Audit cited lemmas and propositions for statement match as early as possible. Check that the cited result actually states what the proof needs, with matching hypotheses, scope, and parameter regime.
 - Choose a domain profile that matches the paper instead of applying one generic checking strategy.
 
 ### 4. Select Targets and Maintain the Obligation Ledger
@@ -116,7 +119,12 @@ Do not stop at labels such as `reviewed_textually`, `looks_plausible`, `standard
 - Prioritize core theorem bottlenecks, high-severity risks, reused lemmas, computational subarguments, and claims with plausible counterexamples.
 - Create an obligation ledger for every core claim and each unresolved bottleneck on its dependency chain.
 - Split large obligations into leaf obligations until each blocker is specific and actionable.
+- Classify unresolved issues before escalating them: distinguish likely typo or transcription defects from substantive proof blockers.
+- For every unresolved step, record whether it is:
+  - a local gap in the current argument
+  - a transitive external dependency through a cited or reused result
 - For every active leaf obligation, record the next attempted action, not only the problem statement.
+- Record the highest-value next action for each active blocker rather than a generic note such as "continue verification."
 - Update the ledger after symbolic checks, counterexample search, formalization attempts, and citation validation.
 - Use the ledger, not intuition, to decide whether the review is actually closed.
 
@@ -125,6 +133,7 @@ Do not stop at labels such as `reviewed_textually`, `looks_plausible`, `standard
 - Attempt at least one direct verification path for every core claim.
 - Attempt at least one adversarial path for universal or easily falsifiable claims when feasible.
 - If the first path is inconclusive and a feasible second path exists, take it before downgrading the claim to unresolved.
+- Prefer to discharge cheap local blockers first: algebra, substitutions, parameter ranges, and statement-match checks often determine whether a larger proof audit is even well-posed.
 - Use executable tools whenever the mathematics admits direct checking.
 - If a needed dependency or package is missing, check whether it is already installed and attempt installation when reasonably possible.
 - Record installation attempts, versions when available, and whether the dependency was later used.
