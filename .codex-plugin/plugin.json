@@ -30,6 +30,7 @@
     "privacyPolicyURL": "https://github.com/FINNMATH1992/llm-math-reviewer",
     "termsOfServiceURL": "https://github.com/FINNMATH1992/llm-math-reviewer",
     "defaultPrompt": [
+      "Review xxx.tex",
       "Review this math paper and extract its core claims.",
       "Build an obligation ledger for this theorem paper.",
       "Check this proof for hidden assumptions or gaps."

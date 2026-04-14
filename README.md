@@ -75,6 +75,7 @@ For difficult papers, this plugin works best when the model is allowed to use th
 
 ## Example Prompts
 
+- `Review xxx.tex`
 - `Review this math paper and extract its core claims.`
 - `Build an obligation ledger for this theorem paper.`
 - `Check this proof for hidden assumptions or citation mismatch.`
